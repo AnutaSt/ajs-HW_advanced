@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/umc2h4fovq44w71j?svg=true)](https://ci.appveyor.com/project/AnutaSt/ajs-hw-oop)
+[![Build status](https://ci.appveyor.com/api/projects/status/cfcbx4tbxh5jx5qe?svg=true)](https://ci.appveyor.com/project/AnutaSt/ajs-hw-advanced)
