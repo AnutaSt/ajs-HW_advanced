@@ -2,7 +2,7 @@ export default function sorting(obj, array) {
   const result = [];
   const copyObj = { ...obj };
 
-  array.forEach(elem => {
+  array.forEach((elem) => {
     result.push({ key: elem, value: copyObj[elem] });
     delete copyObj[elem];
   });
