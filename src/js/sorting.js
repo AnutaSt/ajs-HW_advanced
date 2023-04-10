@@ -1,25 +1,31 @@
-export default function sorting(obj, array) {
+export default function sorting(obj, arr) {
   const result = [];
-  const copyObj = { ...obj };
+  const object = { ...obj };
 
-  array.forEach((elem) => {
-    result.push({ key: elem, value: copyObj[elem] });
-    delete copyObj[elem];
+  arr.forEach((item) => {
+    if (item in object) {
+    result.push({ key: item, value: object[item] });
+    delete object[item];
+    }
   });
 
   const temp = [];
-  for (const key in copyObj) {
-    temp.push({ key, value: copyObj[key] });
+  
+  for (const key in object) {
+    if (Object.hasOwn(object, key)) {
+      temp.push({ key, value: object[key] });
+    }
   }
 
+  // eslint-disable-next-line array-callback-return, consistent-return
   temp.sort((a, b) => {
     if (a.key < b.key) return -1;
     if (a.key > b.key) return 1;
   });
 
-  const arrKeys = Object.keys(copyObj).sort();
-  arrKeys.forEach((elem) => {
-    result.push({ key: elem, value: copyObj[elem] });
+  const arrKeys = Object.keys(object).sort();
+  arrKeys.forEach((item) => {
+    result.push({ key: item, value: object[item] });
   });
 
   return result;
