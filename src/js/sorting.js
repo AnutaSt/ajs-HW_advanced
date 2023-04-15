@@ -15,8 +15,10 @@ export default function sorting(obj, arr) {
 
   // eslint-disable-next-line array-callback-return, consistent-return
   temp.sort((a, b) => {
-    if (a.key < b.key) return -1;
-    if (a.key > b.key) return 1;
+    if (a.key < b.key) {
+      return -1;
+    }
+    return 1;
   });
   result.push(...temp);
 
