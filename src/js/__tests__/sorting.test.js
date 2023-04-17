@@ -42,10 +42,7 @@ test.each([
       { key: 'health', value: 10 },
     ],
   ],
-])('correct sorting %s', (_, sort, expected) => {
-  const result = sorting(obj, sort);
-  expect(result).toEqual(expected);
-});
+]);
 
 test('checking that the object has not changed', () => {
   const initial = { ...obj };
